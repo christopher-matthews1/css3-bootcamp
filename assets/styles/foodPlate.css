@@ -35,6 +35,26 @@ section[data-role='page'] {
 	border-radius: 1em;
 }
 
+input[type="submit"] {
+	margin-top: 1em;
+}
+
+label[for="firstName"].firstNameLabel {
+	margin: 0 auto;
+	padding: 8px;
+	background-color: white;
+	font-weight: bold;
+	width: 130px;
+	border: 1px solid #000;
+	border-bottom: none;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+label[for="firstName"].firstNameLabel+div {
+	margin-top: 0;
+}
+
 .confirmMessage {
 	text-align:center;
 	border: 1px solid #000;
