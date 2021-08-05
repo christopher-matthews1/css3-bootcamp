@@ -7,7 +7,7 @@ body {
 	margin-right: auto;
 }
 /* add a selector that selects section elements that have a data-role attribute = page */
-addSelectorHere {
+section[data-role="page"] {
 	min-height: 100%;
   	width: 100%;
   	height: 100%;
@@ -29,7 +29,7 @@ addSelectorHere {
 }
 
 /* add a selector that selects elements with an id of initScreen that have a child element of img */
-addSelectorHere {
+#initScreen>img {
 	text-align:center;
 	border: 2px solid #000;
 	border-radius: 1em;
@@ -37,7 +37,7 @@ addSelectorHere {
 }
 
 /* add a class selector called confirmMessage */
-addSelectorHere {
+.confirmMessage {
 	text-align:center;
 	border: 1px solid #000;
 	background-color: #fff;
@@ -45,6 +45,8 @@ addSelectorHere {
 	padding: 8px;
 	width: 80%;
 	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #registerForm {
@@ -69,7 +71,7 @@ form ul li.clear {
 }
 
 /* write a class selector called noListType; open index.html and apply the class to ul elements that are descendents of form elements */
-addSelectorHere {
+.noListType {
 		margin: 0;
 		padding: 6px;
 		list-style-type:none;
@@ -97,7 +99,7 @@ addSelectorHere {
 }
 
 /* add a selector for elements with a class of fpButton when the mouse is hovered over the element */
-addSelectorHere {
+.fpButton:hover {
     background-color: #fff;
     box-shadow: 0 0 20px rgba(255,255,255,0.85);
 }
