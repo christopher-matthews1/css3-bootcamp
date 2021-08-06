@@ -44,52 +44,30 @@
     <style>
       #container {
         width: clamp(260px, 100%, 1000px);
-        margin: 0 auto;
         display: grid;
-        grid-template-rows: 124px 60px auto 35% 20%;
+        grid-template-rows: repeat(5,auto);
         grid-template-columns: 1fr 2fr 1fr;
         gap: 5px;
       }
 
-      #brandBanner {
-        grid-column: 1 / span 3;
-      }
-
-      #main {
-        grid-column: 1 / span 3;
-      }
-
-      #mainPageGraphic {
-        grid-column: 1 / span 3;
+      #brandBanner,
+      #main,
+      #mainPageGraphic,
+      #resources {
+        grid-column: 1 / -1;
       }
 
       #mainTextContent {
         padding-top: 1em;
       }
 
-      #mobileApp {
-      }
-
       #resources {
         margin-left: 10px;
-        grid-column: 1 / span 3;
       }
 
       @media (max-width: 840px) {
         #container {
           grid-template-columns: 2fr 1fr;
-          grid-template-rows: 124px clamp(60px, 3vh, 7%) auto auto 250px;
-        }
-        #brandBanner {
-          grid-column: 1 / span 2;
-        }
-
-        #main {
-          grid-column: 1 / span 2;
-        }
-
-        #mainPageGraphic {
-          grid-column: 1 / span 2;
         }
 
         #mainContent {
@@ -106,20 +84,9 @@
         #mobileApp img {
           width: clamp(150px, 25vw, 100%);
         }
-
-        #resources {
-          grid-column: 1 / span 2;
-        }
-
-        #foodPlateLarge {
-          height: auto;
-        }
       }
 
       @media (max-width: 740px) {
-        #container {
-          grid-template-rows: 124px 120px auto auto 250px;
-        }
 
         #main {
           text-align: center;
@@ -128,15 +95,13 @@
         #main ul {
           display: grid;
           font-size: 1.2em;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          grid-template-rows: 60px 60px;
-          gap: 5px;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(2, 60px);
           padding: 0;
         }
         #main ul li {
-          display: block;
-          padding: 15px 5px;
-          border: none;
+          padding: 10px 5px;
+          border: 1px solid #fff;
         }
 
         #brandBanner #search {
@@ -145,19 +110,14 @@
 
         footer {
           display: grid;
-          grid-template-columns: repeat (3, 1fr);
-          grid-template-rows: 1fr 1fr 3fr 3fr;
+          grid-template-columns: repeat (3, auto);
+          grid-template-rows: repeat (4, auto);
           gap: 5px;
         }
 
-        footer > h3 {
-          grid-row: 1;
-          grid-column: 1 / span 3;
-        }
-
+        footer > h3,
         footer hr {
-          grid-row: 2;
-          grid-column: 1 / span 3;
+          grid-column: 1/ span 3;
         }
 
         #resources #foodGroups,
@@ -169,31 +129,27 @@
         }
       }
 
-      @media (max-width: 440px) {
+      @media (max-width: 500px) {
         #container {
-          grid-template-rows: 124px 240px auto auto auto 250px;
-          grid-template-columns: 100%;
+          grid-template-rows: repeat(6, auto);
+          grid-template-columns: auto;
         }
         #main ul {
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 60px 60px 60px 60px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(4, 60px);
         }
         #mobileApp {
           display: grid;
           justify-items: center;
           align-items: center;
         }
+      }
 
-        #brandBanner #search {
-          display: none;
-        }
-
-        #brandBanner,
-        #main,
-        #mainPageGraphic,
-        #resources {
-          grid-column: 1;
-        }
+      @media (max-width: 400px) {
+        #brandBanner #search,
+        #brandBanner #searchIcon {
+            display: none;
+          }
       }
     </style>
     <script>
